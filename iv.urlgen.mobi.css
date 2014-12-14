@@ -1,0 +1,64 @@
+body {
+    background-color: antiquewhite;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#mainholder {
+    width: 95%;
+    background-color: antiquewhite;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.5em;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.formlayout {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+}
+
+.result {
+    font-family: Verdana, sans-serif;
+    font-size: 0.30em;
+    margin-bottom: 2px;
+}
+
+.left-side-label {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display:block;
+}
+
+.right-side-label {
+    margin-right: 35px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+input {
+    margin: 5px;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    width: 50%;
+    font-family: Tahoma, sans-serif;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+input[type="url"] {
+    font-size: 1em;
+    font-family: Tahoma, sans-serif;
+    display: inline-block;
+    width: 50%;
+}
+
+input[type="checkbox"] {
+    margin-top: 15px;
+    display: inline-block;
+}

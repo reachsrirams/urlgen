@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UTM URL Builder - R2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="UTM URL Builder is my project with the sole goal of learning JavaScript and CSS." />
+        <meta name="keywords" content="utm, urchin tracking, google analytics, javascript, css, html5, blog, traffic, source, link, tagging, medium, campaign,blog,campaign,css,google analytics,html5,javascript,link,medium,source,tagging,traffic,urchin tracking" />
+        <link rel="stylesheet" href="http://www.innervoice.in/css/iv.base.css" type="text/css" media="all" />
+        <link rel="stylesheet" media="screen and (min-device-width: 960px)" type="text/css" href="iv.urlgen.css" />
+        <link rel="stylesheet" media="screen and (max-device-width: 800px)" type="text/css" href="iv.urlgen.mobi.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://innervoice.in/js/iv.base.js"></script>
+        <script type="text/javascript" src="utm.pref.mgr.js"></script>
+        <script type="text/javascript" src="urlgen.js"></script>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-26491607-2']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script type="text/javascript">
+
+            function main()
+            {
+                var urlField = document.getElementById("url");
+                urlField.value = decodeURIComponent(returnQueryValue("url"));
+                loadAllPreferences();
+                generateResults();
+            }
+
+            $(document).ready(main);
+
+        </script>
+    </head>
+    <body>
+
+        <div id="mainholder">
+            <form>
+                <fieldset class="formlayout">
+                    <label for="url">URL: </label>
+                    <input type="url" name="url" id="url" autofocus placeholder="http://www.google.com" required="required" onkeyup="javascript:generateResults()"/>
+                </fieldset>
+                <fieldset id="results" class="formlayout">
+                    <legend>Results</legend>
+                    <div id="results_for_facebook" class="result"></div>
+                    <div id="results_for_linkedin" class="result"></div>
+                    <div id="results_for_googleplus" class="result"></div>
+                    <div id="results_for_twitter" class="result"></div>
+                    <div id="results_for_allpurpose" class="result"></div>
+                </fieldset>
+                <fieldset id="settingsform" class="formlayout">
+                    <legend>UTM Settings</legend>
+                    <div class="testform">
+                        <label for="utm_campaign" class="left-side-label">Campaign: </label>
+                        <input type="text" name="utm_campaign" id="utm_campaign" required="required" onkeyup="javascript:generateResults()"/>
+                        <label for="utm_source" class="left-side-label">Source: </label>
+                        <input type="text" name="utm_source" id="utm_source" required="required" onkeyup="javascript:generateResults()"/>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="medium" id="facebook" value="facebook" checked="checked" onclick="javascript:generateResults()"/>
+                        <label for="facebook" class="right-side-label">Facebook</label>
+
+                        <input type="checkbox" name="medium" id="linkedin" value="linkedin" checked="checked" onclick="javascript:generateResults()"/>
+                        <label for="linkedin" class="right-side-label">LinkedIn</label>
+
+                        <input type="checkbox" name="medium" id="googleplus" value="googleplus" checked="checked" onclick="javascript:generateResults()"/>
+                        <label for="googleplus" class="right-side-label">Google+</label>
+
+                        <input type="checkbox" name="medium" id="twitter" value="twitter" checked="checked" onclick="javascript:generateResults()"/>
+                        <label for="twitter" class="right-side-label">Twitter</label>
+
+                        <input type="checkbox" name="medium" id="allpurpose" value="allpurpose" checked="checked" onclick="javascript:generateResults()"/>
+                        <label for="allpurpose" class="right-side-label">All Purpose</label>
+
+                    </div>
+                </fieldset>
+                <a class="formlayout" href="http://goo.gl/9GfgD" target="_blank">Click here to learn more about UTM - Urchin Tracking Module</a>
+            </form>
+            
+        </div>
+    </body>
+</html>

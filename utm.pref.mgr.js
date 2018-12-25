@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Innervoice Consulting 2012. All rights reserved.
+ * Copyright (c) Cloudbuilder Consulting 2012. All rights reserved.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
  * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
@@ -103,7 +103,7 @@ PreferenceManager.prototype.setCampaign = function(value) {
 }
 
 PreferenceManager.prototype.getSource = function() {
-    return this.loadPrefFromLocalStorage(this.sourceKey, "innervoice.in");
+    return this.loadPrefFromLocalStorage(this.sourceKey, "cloudbuilder.in");
 }
 
 PreferenceManager.prototype.setSource = function(value) {
